@@ -1,11 +1,7 @@
 pipeline {
 
 	agent any
-/*
-	tools {
-        maven "maven3"
-    }
-*/
+
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
@@ -13,7 +9,7 @@ pipeline {
         NEXUS_REPOSITORY = "vprofile-releases"
     	NEXUS_REPOGRP_ID    = "vpro-maven-group"
         NEXUS_CREDENTIAL_ID = "admin"
-        ARTVERSION = "${env.BUILD_ID}"
+        ARTVERSION = "alpha"
     }
 
     stages{
@@ -113,7 +109,5 @@ pipeline {
                 }
             }
         }
-
-
     }
 }
