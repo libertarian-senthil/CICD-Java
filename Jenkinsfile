@@ -17,6 +17,7 @@ pipeline {
         stage('BUILD'){
             steps {
                 sh 'mvn clean install -DskipTests'
+                echo 'Build can be found in /var/lib/jenkins/.m2/repository/com/visualpathit/vprofile/v2'
             }
             post {
                 success {
